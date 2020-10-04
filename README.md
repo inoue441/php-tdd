@@ -1,3 +1,23 @@
+**インストール**
+
+```shell
+◆ make コマンドが使える場合
+$ make install
+
+◆ make コマンドが使えない場合
+$ docker-compose run --rm composer composer install 
+```
+
+**テスト**
+
+```shell
+◆ make コマンドが使える場合
+$ make test
+
+◆ make コマンドが使えない場合
+$ docker-compose run --rm php ./vendor/bin/phpunit
+```
+
 **環境**
 
 ```
@@ -10,3 +30,4 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
 $ vendor/bin/phpunit --version
 PHPUnit 9.4.0 by Sebastian Bergmann and contributors.
 ```
+
