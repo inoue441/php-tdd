@@ -19,4 +19,11 @@ class SampleTest extends TestCase
         $result = $sample->solve('L');
         $this->assertSame('No', $result);
     }
+
+    public function test文字列UULを渡したとき、文字列Noを返す()
+    {
+        $sample = new \Sample();
+        $result = $sample->solve('UUL');
+        $this->assertSame('No', $result);
+    }
 }
