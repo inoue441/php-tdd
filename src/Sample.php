@@ -2,4 +2,8 @@
 
 class Sample
 {
+    public function solve()
+    {
+
+    }
 }
