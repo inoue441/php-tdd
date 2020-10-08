@@ -1,4 +1,5 @@
 <?php
+/** @noinspection NonAsciiCharacters */
 
 use PHPUnit\Framework\TestCase;
 
@@ -11,22 +12,34 @@ class SampleTest extends TestCase
         $this->sample = new \Sample();
     }
 
-    public function test文字Rを渡したとき、文字列Yesを返す()
+    /**
+     * @test
+     */
+    public function 文字Rを渡したとき、文字列Yesを返す()
     {
         $this->assertSame('Yes', $this->sample->solve('R'));
     }
 
-    public function test文字Lを渡したとき、文字列Noを返す()
+    /**
+     * @test
+     */
+    public function 文字Lを渡したとき、文字列Noを返す()
     {
         $this->assertSame('No', $this->sample->solve('L'));
     }
 
-    public function test文字列UULを渡したとき、文字列Noを返す()
+    /**
+     * @test
+     */
+    public function 文字列UULを渡したとき、文字列Noを返す()
     {
         $this->assertSame('No', $this->sample->solve('UUL'));
     }
 
-    public function test文字列URUを渡したとき、文字列Noを返す()
+    /**
+     * @test
+     */
+    public function 文字列URUを渡したとき、文字列Noを返す()
     {
         $this->assertSame('No', $this->sample->solve('URU'));
     }
