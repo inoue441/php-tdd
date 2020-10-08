@@ -4,31 +4,30 @@ use PHPUnit\Framework\TestCase;
 
 class SampleTest extends TestCase
 {
+    protected Sample $sample;
+
+    protected function setUp(): void
+    {
+        $this->sample = new \Sample();
+    }
+
     public function test文字Rを渡したとき、文字列Yesを返す()
     {
-        $sample = new \Sample();
-        $result = $sample->solve('R');
-        $this->assertSame('Yes', $result);
+        $this->assertSame('Yes', $this->sample->solve('R'));
     }
 
     public function test文字Lを渡したとき、文字列Noを返す()
     {
-        $sample = new \Sample();
-        $result = $sample->solve('L');
-        $this->assertSame('No', $result);
+        $this->assertSame('No', $this->sample->solve('L'));
     }
 
     public function test文字列UULを渡したとき、文字列Noを返す()
     {
-        $sample = new \Sample();
-        $result = $sample->solve('UUL');
-        $this->assertSame('No', $result);
+        $this->assertSame('No', $this->sample->solve('UUL'));
     }
 
     public function test文字列URUを渡したとき、文字列Noを返す()
     {
-        $sample = new \Sample();
-        $result = $sample->solve('URU');
-        $this->assertSame('No', $result);
+        $this->assertSame('No', $this->sample->solve('URU'));
     }
 }
